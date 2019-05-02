@@ -26,7 +26,7 @@ public class RunnerImpl implements Runner {
 
         selectedPackage += exercisePackageName;
 
-        Reflections reflections = new Reflections();
+        Reflections reflections = new Reflections(selectedPackage);
         Set<Class<? extends Exercise>> exerciseClasses = reflections.getSubTypesOf(Exercise.class);
         String delimitedClassesName = String.join(", ", this.getClassesName(exerciseClasses));
 
@@ -38,7 +38,7 @@ public class RunnerImpl implements Runner {
 
         System.out.println(String.format("%n-> Selected package: %s", selectedPackage));
         
-        System.out.println(String.format("%n------------------------------%n"));
+        System.out.println(String.format("%n------------------------------------------------------------------------%n"));
 
         try {
             Class<?> selectedExerciseClass = Class.forName(selectedPackage);
