@@ -14,6 +14,10 @@ import java.util.Scanner;
 */
 public class Four implements Exercise {
 
+    public int getId() {
+        return 4;
+    }
+
     public void run(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
