@@ -7,4 +7,12 @@
     <groupId>me.andredezzy</groupId>
     <artifactId>exercises-runner</artifactId>
     <version>1.0-SNAPSHOT</version>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.9.11</version>
+        </dependency>
+    </dependencies>
 </project>

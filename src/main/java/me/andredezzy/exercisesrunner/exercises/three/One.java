@@ -23,6 +23,10 @@ import java.util.Scanner;
 */
 public class One implements Exercise {
 
+    public int getId() {
+        return 1;
+    }
+
     public void run(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
