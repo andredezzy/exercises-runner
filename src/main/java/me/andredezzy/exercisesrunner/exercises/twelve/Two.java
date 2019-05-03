@@ -1,4 +1,4 @@
-package me.andredezzy.exercisesrunner.exercises.three;
+package me.andredezzy.exercisesrunner.exercises.twelve;
 
 import me.andredezzy.exercisesrunner.exercises.Exercise;
 
@@ -6,18 +6,14 @@ import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /*
-        Informe o raio da caixa d'água cilíndrica: 2
-        Informe a altura da caixa d'água cilíndrica: 2
+    Informe o raio da caixa d'água cilíndrica: 2
+    Informe a altura da caixa d'água cilíndrica: 2
 
-        O volume da caixa d'água cilíndrica é: PI * 2.0^2 * 2.0
-        > 25.132741228718345
-        > 25,13
+    O volume da caixa d'água cilíndrica é: PI * 2.0^2 * 2.0
+    > 25.132741228718345
+    > 25,13
 */
 public class Two implements Exercise {
-
-    public int getId() {
-        return 2;
-    }
 
     public void run(String[] args) {
         Scanner scanner = new Scanner(System.in);

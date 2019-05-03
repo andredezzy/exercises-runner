@@ -47,6 +47,8 @@ public class RunnerImpl implements Runner {
                 Exercise exercise = (Exercise) selectedExerciseClass.newInstance();
 
                 exercise.run(args);
+                
+                System.out.println();
             } else {
                 System.out.println("[ERROR] " + selectedPackage + " don't implements Exercise.class");
             }

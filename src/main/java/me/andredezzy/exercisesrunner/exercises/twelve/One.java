@@ -1,31 +1,27 @@
-package me.andredezzy.exercisesrunner.exercises.three;
+package me.andredezzy.exercisesrunner.exercises.twelve;
 
 import me.andredezzy.exercisesrunner.exercises.Exercise;
 
 import java.util.Scanner;
 
 /*
-        Informe o valor de 'A': 2
-        Informe o valor de 'B': 2
-        Informe o valor de 'C': 2
+    Informe o valor de 'A': 2
+    Informe o valor de 'B': 2
+    Informe o valor de 'C': 2
 
-        a)
-        A área do trapézio é: ((2.0 + 2.0) / 2) * 2.0
-        > 4.0
+    a)
+    A área do trapézio é: ((2.0 + 2.0) / 2) * 2.0
+    > 4.0
 
-        b)
-        A área do quadrado é: 2.0²
-        > 4.0
+    b)
+    A área do quadrado é: 2.0²
+    > 4.0
 
-        c)
-        A área da superfície do cubo é: 6 * 2.0²
-        > 24.0
+    c)
+    A área da superfície do cubo é: 6 * 2.0²
+    > 24.0
 */
 public class One implements Exercise {
-
-    public int getId() {
-        return 1;
-    }
 
     public void run(String[] args) {
         Scanner scanner = new Scanner(System.in);
