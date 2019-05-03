@@ -1,21 +1,17 @@
-package me.andredezzy.exercisesrunner.exercises.three;
+package me.andredezzy.exercisesrunner.exercises.twelve;
 
 import me.andredezzy.exercisesrunner.exercises.Exercise;
 
 import java.util.Scanner;
 
 /*
- Informe o nome do piloto: Teste
- Informe a distância percorrida (em km) por Teste: 100
- Informe quantas horas Teste demorou para percorrer 100.0km: 2
+    Informe o nome do piloto: Teste
+    Informe a distância percorrida (em km) por Teste: 100
+    Informe quantas horas Teste demorou para percorrer 100.0km: 2
 
- > A velocidade média de Teste foi 50.0 km/h.
- */
+    > A velocidade média de Teste foi 50.0 km/h.
+*/
 public class Five implements Exercise {
-
-    public int getId() {
-        return 5;
-    }
 
     public void run(String[] args) {
         Scanner scanner = new Scanner(System.in);

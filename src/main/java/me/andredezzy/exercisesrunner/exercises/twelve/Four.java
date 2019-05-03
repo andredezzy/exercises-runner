@@ -1,22 +1,18 @@
-package me.andredezzy.exercisesrunner.exercises.three;
+package me.andredezzy.exercisesrunner.exercises.twelve;
 
 import me.andredezzy.exercisesrunner.exercises.Exercise;
 
 import java.util.Scanner;
 
 /*
-        Informe o nome do vendedor: Teste
-        Informe o salário fixo de Teste: 100
-        Informe o total de vendas de Teste: 10
-        Informe o percentual no qual Teste recebe em cima do total de vendas: 5
+    Informe o nome do vendedor: Teste
+    Informe o salário fixo de Teste: 100
+    Informe o total de vendas de Teste: 10
+    Informe o percentual no qual Teste recebe em cima do total de vendas: 5
 
-        > O salário total de Teste é: $150.0
+    > O salário total de Teste é: $150.0
 */
 public class Four implements Exercise {
-
-    public int getId() {
-        return 4;
-    }
 
     public void run(String[] args) {
         Scanner scanner = new Scanner(System.in);

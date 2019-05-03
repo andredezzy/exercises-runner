@@ -3,7 +3,7 @@ package me.andredezzy.exercisesrunner;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
-import me.andredezzy.exercisesrunner.exercises.three.One;
+import me.andredezzy.exercisesrunner.exercises.twelve.One;
 import me.andredezzy.exercisesrunner.runner.Runner;
 import me.andredezzy.exercisesrunner.runner.RunnerImpl;
 import me.andredezzy.exercisesrunner.utils.asker.AskerImpl;

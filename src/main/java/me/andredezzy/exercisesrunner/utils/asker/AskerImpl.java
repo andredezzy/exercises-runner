@@ -10,13 +10,27 @@ public class AskerImpl implements Asker {
         SCANNER = new Scanner(System.in);
     }
 
-    @Override
     public String askForString() {
         return SCANNER.next();
     }
 
-    @Override
     public String askForText() {
-        return SCANNER.next();
+        Scanner scanner = new Scanner(System.in);
+        
+        return scanner.nextLine();
+    }
+
+    public int askForNumber() {
+        return SCANNER.nextInt();
+    }
+
+    public double askForDouble() {
+        return SCANNER.nextDouble();
+    }
+
+    public double askForPercentage() {
+        String percentageString = this.askForString();
+        
+        return Double.parseDouble(percentageString.replace("%", ""));
     }
 }
