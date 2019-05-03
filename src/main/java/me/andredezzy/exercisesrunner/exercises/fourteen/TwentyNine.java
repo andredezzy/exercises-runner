@@ -9,6 +9,12 @@ public class TwentyNine implements Exercise {
         System.out.print("Informe a data no formato DDMMAA: ");
         int dateCode = Application.ASKER.askForNumber();
 
+        while (String.valueOf(dateCode).length() != 6) {
+            System.out.println("[ERRO] A data deve conter 6 (cinco) algarismos! Formato: DDMMAA");
+            System.out.print("Informe a data no formato DDMMAA: ");
+            dateCode = Application.ASKER.askForNumber();
+        }
+
         int d1 = dateCode / 100000;
         int d2 = (dateCode / 10000) % 10;
 

@@ -25,7 +25,7 @@ public class TwentySeven implements Exercise {
         int code = Application.ASKER.askForNumber();
 
         while (String.valueOf(code).length() != 5) {
-            System.out.println("[ERRO] O código não possui 5 (cinco) algarismos.");
+            System.out.println("[ERRO] O código não possui 5 (cinco) algarismos!");
             System.out.print("Informe um código de 5 (cinco) algarismos: ");
             code = Application.ASKER.askForNumber();
         }
