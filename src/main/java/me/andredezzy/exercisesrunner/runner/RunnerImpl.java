@@ -26,6 +26,14 @@ public class RunnerImpl implements Runner {
 
         selectedPackage += exercisePackageName;
 
+        for (String packageName : packagesAt) {
+            if (packageName.equalsIgnoreCase(selectedPackage)) {
+                selectedPackage = packageName;
+
+                break;
+            }
+        }
+
         Reflections reflections = new Reflections(selectedPackage);
         Set<Class<? extends Exercise>> exerciseClasses = reflections.getSubTypesOf(Exercise.class);
         String delimitedClassesName = String.join(", ", this.getClassesName(exerciseClasses));
@@ -36,27 +44,47 @@ public class RunnerImpl implements Runner {
 
         selectedPackage += "." + exerciseClassName;
 
+        for (Class<? extends Exercise> exerciseClass : exerciseClasses) {
+            String exerciseClassCanonicalName = exerciseClass.getCanonicalName();
+
+            if (exerciseClassCanonicalName.equalsIgnoreCase(selectedPackage)) {
+                selectedPackage = exerciseClassCanonicalName;
+
+                break;
+            }
+        }
+
         System.out.println(String.format("%n-> Selected package: %s", selectedPackage));
-        
+
         System.out.println(String.format("%n------------------------------------------------------------------------%n"));
 
-        try {
-            Class<?> selectedExerciseClass = Class.forName(selectedPackage);
+        boolean foundExerciseClass = false;
 
-            if (Exercise.class.isAssignableFrom(selectedExerciseClass)) {
-                Exercise exercise = (Exercise) selectedExerciseClass.newInstance();
+        for (Class<? extends Exercise> exerciseClass : exerciseClasses) {
+            if (exerciseClass.getCanonicalName().equalsIgnoreCase(selectedPackage)) {
+                foundExerciseClass = true;
 
-                exercise.run(args);
-                
-                System.out.println();
-            } else {
-                System.out.println("[ERROR] " + selectedPackage + " don't implements Exercise.class");
+                try {
+                    if (Exercise.class.isAssignableFrom(exerciseClass)) {
+                        Exercise exercise = (Exercise) exerciseClass.newInstance();
+
+                        exercise.run(args);
+                    } else {
+                        System.out.println("[ERRO] '" + selectedPackage + "' não implementa 'Exercise.class'!");
+                    }
+                } catch (Exception ex) {
+                    Logger.getLogger(RunnerImpl.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+                break;
             }
-        } catch (ClassNotFoundException ex) {
-            System.out.println("[ERROR] Occurred an error: " + selectedPackage + " not found!");
-        } catch (Exception ex) {
-            Logger.getLogger(RunnerImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
+
+        if (!foundExerciseClass) {
+            System.out.println("[ERRO] A classe '" + selectedPackage + "' não foi encontrada!");
+        }
+
+        System.out.println();
     }
 
     private List<String> replaceList(List<String> packageNames, String target, String replacement) {
