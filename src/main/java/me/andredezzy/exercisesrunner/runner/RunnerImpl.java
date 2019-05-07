@@ -9,6 +9,8 @@ import java.util.logging.Logger;
 import me.andredezzy.exercisesrunner.Application;
 import me.andredezzy.exercisesrunner.exercises.Exercise;
 import me.andredezzy.exercisesrunner.runner.manager.RunnerManager;
+import me.andredezzy.exercisesrunner.utils.Formatter;
+import me.andredezzy.exercisesrunner.utils.NumberTranslator;
 import me.andredezzy.exercisesrunner.utils.asker.AskerImpl;
 import org.reflections.Reflections;
 
@@ -23,6 +25,13 @@ public class RunnerImpl implements Runner {
         System.out.println(String.format("Select the exercises package: (%s)", delimitedPackagesName));
         System.out.print("> ");
         String exercisePackageName = Application.ASKER.askForString();
+
+        int exercisePackageNameAsInteger = Formatter.isInteger(exercisePackageName, -1);
+
+        if (exercisePackageNameAsInteger != -1) {
+            exercisePackageName = NumberTranslator.getTranslationTo(exercisePackageNameAsInteger)
+                    .replaceAll(" ", "");
+        }
 
         selectedPackage += exercisePackageName;
 
@@ -41,6 +50,13 @@ public class RunnerImpl implements Runner {
         System.out.println(String.format("\nSelect the exercise's class to execute: (%s)", delimitedClassesName));
         System.out.print("> ");
         String exerciseClassName = Application.ASKER.askForString();
+
+        int exerciseClassNameAsInteger = Formatter.isInteger(exerciseClassName, -1);
+
+        if (exerciseClassNameAsInteger != -1) {
+            exerciseClassName = NumberTranslator.getTranslationTo(exerciseClassNameAsInteger)
+                    .replaceAll(" ", "");
+        }
 
         selectedPackage += "." + exerciseClassName;
 
