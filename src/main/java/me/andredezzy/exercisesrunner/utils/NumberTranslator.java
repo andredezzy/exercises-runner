@@ -9,19 +9,6 @@ import java.util.Map;
 
 public class NumberTranslator {
 
-    private static final String[] TENS_NAMES = {
-        "",
-        " ten",
-        " twenty",
-        " thirty",
-        " forty",
-        " fifty",
-        " sixty",
-        " seventy",
-        " eighty",
-        " ninety"
-    };
-
     private static final String[] NUM_NAMES = {
         "",
         " one",
@@ -43,6 +30,19 @@ public class NumberTranslator {
         " seventeen",
         " eighteen",
         " nineteen"
+    };
+
+    private static final String[] TENS_NAMES = {
+        "",
+        " ten",
+        " twenty",
+        " thirty",
+        " forty",
+        " fifty",
+        " sixty",
+        " seventy",
+        " eighty",
+        " ninety"
     };
 
     public static String getTranslationTo(long number) {
