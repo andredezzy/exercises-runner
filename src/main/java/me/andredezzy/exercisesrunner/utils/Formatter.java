@@ -1,5 +1,7 @@
 package me.andredezzy.exercisesrunner.utils;
 
+import java.text.DecimalFormat;
+
 public class Formatter {
 
     public static int isInteger(String s, int ifNot) {
@@ -9,5 +11,17 @@ public class Formatter {
         }
 
         return ifNot;
+    }
+    
+    public static String trim(double n, int decimals){
+        StringBuilder decimalsStringBuilder = new StringBuilder();
+        
+        for (int i = 0; i < decimals; i++){
+        decimalsStringBuilder.append("0");
+        }
+        
+        DecimalFormat trimDecimalFormat = new DecimalFormat(String.format("#.%s", decimalsStringBuilder.toString()));
+        
+        return trimDecimalFormat.format(n);
     }
 }
