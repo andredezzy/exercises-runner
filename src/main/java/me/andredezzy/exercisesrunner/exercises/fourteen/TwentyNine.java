@@ -7,12 +7,12 @@ public class TwentyNine implements Exercise {
 
     public void run(String[] args) {
         System.out.print("Informe a data no formato DDMMAA: ");
-        int dateCode = Application.ASKER.askForNumber();
+        int dateCode = Application.ASKER.askForInt();
 
         while (String.valueOf(dateCode).length() != 6) {
             System.out.println("[ERRO] A data deve conter 6 (cinco) algarismos! Formato: DDMMAA");
             System.out.print("Informe a data no formato DDMMAA: ");
-            dateCode = Application.ASKER.askForNumber();
+            dateCode = Application.ASKER.askForInt();
         }
 
         int d1 = dateCode / 100000;

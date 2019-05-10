@@ -29,16 +29,16 @@ public class Seventeen implements Exercise {
 
     public void run(String[] args) {
         System.out.print("Informe o valor de 'A': ");
-        int a = Application.ASKER.askForNumber();
+        int a = Application.ASKER.askForInt();
 
         System.out.print("Informe o valor de 'B': ");
-        int b = Application.ASKER.askForNumber();
+        int b = Application.ASKER.askForInt();
 
         System.out.print("Informe o valor de 'C': ");
-        int c = Application.ASKER.askForNumber();
+        int c = Application.ASKER.askForInt();
 
         System.out.print("Informe o valor de 'D': ");
-        int d = Application.ASKER.askForNumber();
+        int d = Application.ASKER.askForInt();
 
         System.out.println("\nAdições:");
         System.out.println("> A + B: " + (a + b));

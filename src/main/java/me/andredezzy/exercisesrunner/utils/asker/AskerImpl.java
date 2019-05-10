@@ -20,7 +20,7 @@ public class AskerImpl implements Asker {
         return scanner.nextLine();
     }
 
-    public int askForNumber() {
+    public int askForInt() {
         return SCANNER.nextInt();
     }
 

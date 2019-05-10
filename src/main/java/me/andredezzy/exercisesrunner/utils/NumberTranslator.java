@@ -1,26 +1,8 @@
 package me.andredezzy.exercisesrunner.utils;
 
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class NumberTranslator {
-
-    private static final String[] TENS_NAMES = {
-        "",
-        " ten",
-        " twenty",
-        " thirty",
-        " forty",
-        " fifty",
-        " sixty",
-        " seventy",
-        " eighty",
-        " ninety"
-    };
 
     private static final String[] NUM_NAMES = {
         "",
@@ -43,6 +25,19 @@ public class NumberTranslator {
         " seventeen",
         " eighteen",
         " nineteen"
+    };
+
+    private static final String[] TENS_NAMES = {
+        "",
+        " ten",
+        " twenty",
+        " thirty",
+        " forty",
+        " fifty",
+        " sixty",
+        " seventy",
+        " eighty",
+        " ninety"
     };
 
     public static String getTranslationTo(long number) {

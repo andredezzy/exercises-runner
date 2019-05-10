@@ -6,7 +6,7 @@ public interface Asker {
 
     String askForText();
     
-    int askForNumber();
+    int askForInt();
     
     double askForDouble();
     
