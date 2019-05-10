@@ -22,12 +22,12 @@ public class TwentySeven implements Exercise {
 
     public void run(String[] args) {
         System.out.print("Informe um código de 5 (cinco) algarismos: ");
-        int code = Application.ASKER.askForNumber();
+        int code = Application.ASKER.askForInt();
 
         while (String.valueOf(code).length() != 5) {
             System.out.println("[ERRO] O código não possui 5 (cinco) algarismos!");
             System.out.print("Informe um código de 5 (cinco) algarismos: ");
-            code = Application.ASKER.askForNumber();
+            code = Application.ASKER.askForInt();
         }
 
         int a = code / 10000;

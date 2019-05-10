@@ -17,10 +17,10 @@ public class TwentyFive implements Exercise {
 
     public void run(String[] args) {
         System.out.print("Informe o valor de 'A': ");
-        int a = Application.ASKER.askForNumber();
+        int a = Application.ASKER.askForInt();
 
         System.out.print("Informe o valor de 'B': ");
-        int b = Application.ASKER.askForNumber();
+        int b = Application.ASKER.askForInt();
 
         System.out.println(String.format("%nQuociente: %s / %s", a, b));
         System.out.println("> " + (a / b));

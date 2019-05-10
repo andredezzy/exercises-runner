@@ -7,10 +7,10 @@ public class ThirtyNine implements Exercise {
 
     public void run(String[] args) {
         System.out.print("Informe o valor da compra (não utilize casas decimais -> moedas): ");
-        int price = Application.ASKER.askForNumber();
+        int price = Application.ASKER.askForInt();
         
         System.out.print("Informe a quantia em dinheiro dada ao caixa: ");
-        int payAmount = Application.ASKER.askForNumber();
+        int payAmount = Application.ASKER.askForInt();
         
         if (price > payAmount) {
             System.out.println("\n> Dinheiro insuficiente! Faltam R$" + (price - payAmount));

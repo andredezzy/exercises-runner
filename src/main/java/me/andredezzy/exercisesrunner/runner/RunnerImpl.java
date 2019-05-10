@@ -1,18 +1,17 @@
 package me.andredezzy.exercisesrunner.runner;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import me.andredezzy.exercisesrunner.Application;
 import me.andredezzy.exercisesrunner.exercises.Exercise;
 import me.andredezzy.exercisesrunner.runner.manager.RunnerManager;
 import me.andredezzy.exercisesrunner.utils.Formatter;
 import me.andredezzy.exercisesrunner.utils.NumberTranslator;
-import me.andredezzy.exercisesrunner.utils.asker.AskerImpl;
 import org.reflections.Reflections;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class RunnerImpl implements Runner {
 

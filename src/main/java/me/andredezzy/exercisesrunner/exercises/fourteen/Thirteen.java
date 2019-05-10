@@ -1,8 +1,9 @@
 package me.andredezzy.exercisesrunner.exercises.fourteen;
 
-import java.text.DecimalFormat;
 import me.andredezzy.exercisesrunner.Application;
 import me.andredezzy.exercisesrunner.exercises.Exercise;
+
+import java.text.DecimalFormat;
 
 /*
     Informe a temperatura (Fº): 72

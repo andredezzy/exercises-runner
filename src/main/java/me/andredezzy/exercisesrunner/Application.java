@@ -1,12 +1,7 @@
 package me.andredezzy.exercisesrunner;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
-import me.andredezzy.exercisesrunner.exercises.twelve.One;
 import me.andredezzy.exercisesrunner.runner.Runner;
 import me.andredezzy.exercisesrunner.runner.RunnerImpl;
-import me.andredezzy.exercisesrunner.utils.NumberTranslator;
 import me.andredezzy.exercisesrunner.utils.asker.AskerImpl;
 import org.reflections.Reflections;
 import org.reflections.scanners.ResourcesScanner;
@@ -14,6 +9,10 @@ import org.reflections.scanners.SubTypesScanner;
 import org.reflections.util.ClasspathHelper;
 import org.reflections.util.ConfigurationBuilder;
 import org.reflections.util.FilterBuilder;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
 
 public class Application {
 

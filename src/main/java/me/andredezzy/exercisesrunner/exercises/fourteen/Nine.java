@@ -1,6 +1,5 @@
 package me.andredezzy.exercisesrunner.exercises.fourteen;
 
-import java.util.Scanner;
 import me.andredezzy.exercisesrunner.Application;
 import me.andredezzy.exercisesrunner.exercises.Exercise;
 

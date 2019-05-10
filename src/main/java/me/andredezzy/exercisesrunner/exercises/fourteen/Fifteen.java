@@ -1,8 +1,9 @@
 package me.andredezzy.exercisesrunner.exercises.fourteen;
 
-import java.text.DecimalFormat;
 import me.andredezzy.exercisesrunner.Application;
 import me.andredezzy.exercisesrunner.exercises.Exercise;
+
+import java.text.DecimalFormat;
 
 /*
     Informe o tempo gasto na viagem (horas): 2
@@ -18,7 +19,7 @@ public class Fifteen implements Exercise {
         double spentTime = Application.ASKER.askForDouble();
 
         System.out.print("Informe a velocidade média durante toda a viagem: ");
-        int averageSpeed = Application.ASKER.askForNumber();
+        int averageSpeed = Application.ASKER.askForInt();
 
         double distance = spentTime * averageSpeed;
         double spentFuelAmount = distance / 12;

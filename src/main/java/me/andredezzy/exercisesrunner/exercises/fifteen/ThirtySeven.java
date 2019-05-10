@@ -7,7 +7,7 @@ public class ThirtySeven implements Exercise {
 
     public void run(String[] args) {
         System.out.print("Informe a idade para calcular os meses e dias diante dos anos vividos: ");
-        int age = Application.ASKER.askForNumber();
+        int age = Application.ASKER.askForInt();
         
         int livedMonths = age * 12;
         int livedDays = livedMonths * 30;

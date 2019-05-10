@@ -16,10 +16,10 @@ public class TwentyOne implements Exercise {
 
     public void run(String[] args) {
         System.out.print("Informe o valor de 'A': ");
-        int a = Application.ASKER.askForNumber();
+        int a = Application.ASKER.askForInt();
 
         System.out.print("Informe o valor de 'B': ");
-        int b = Application.ASKER.askForNumber();
+        int b = Application.ASKER.askForInt();
 
         double aSquare = Math.pow(a, 2);
         double bSquare = Math.pow(b, 2);

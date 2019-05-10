@@ -10,7 +10,7 @@ public class FortyOne implements Exercise {
         double minSalary = Application.ASKER.askForDouble();
 
         System.out.print("Informe a quantidade de carros vendidos: ");
-        int soldCars = Application.ASKER.askForNumber();
+        int soldCars = Application.ASKER.askForInt();
 
         double comissionBySoldCars = soldCars * 50D;
         double comissionBySoldCarsPercentage = comissionBySoldCars * 0.05;

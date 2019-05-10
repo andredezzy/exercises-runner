@@ -7,10 +7,10 @@ public class ThirtyOne implements Exercise {
 
     public void run(String[] args) {
         System.out.print("Informe um valor para 'A': ");
-        int a = Application.ASKER.askForNumber();
+        int a = Application.ASKER.askForInt();
 
         System.out.print("Informe um valor para 'B': ");
-        int b = Application.ASKER.askForNumber();
+        int b = Application.ASKER.askForInt();
 
         if (a > b) {
             System.out.println("\n> 'A' contém o maior valor -> " + a);

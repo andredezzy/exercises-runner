@@ -29,12 +29,12 @@ public class ThirtyFive implements Exercise {
 
         System.out.println("\n> Média: " + Formatter.trim(testsAverage, 2));
 
-        boolean approved = false;
+        boolean isApproved = false;
 
         if (testsAverage > 7 && (portugueseGrade >= 5 && mathGrade >= 5 && generalKnowledgeGrade >= 5)) {
-            approved = true;
+            isApproved = true;
         }
 
-        System.out.println("-> Aprovado? " + (approved ? "SIMMM :D" : "... não :("));
+        System.out.println("-> Aprovado? " + (isApproved ? "SIMMM :D" : "... não :("));
     }
 }

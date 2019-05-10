@@ -7,7 +7,7 @@ public class FortyFive implements Exercise {
 
     public void run(String[] args) {
         System.out.print("Informe o número de sua conta bancaria: ");
-        int bankAccountCode = Application.ASKER.askForNumber();
+        int bankAccountCode = Application.ASKER.askForInt();
         
         System.out.print("Informe o saldo contido na mesma: ");
         double balance = Application.ASKER.askForDouble();
@@ -21,7 +21,7 @@ public class FortyFive implements Exercise {
             System.out.println("   [3] Sair");
             
             System.out.print(">   ");
-            int optionIndex = Application.ASKER.askForNumber();
+            int optionIndex = Application.ASKER.askForInt();
             
             System.out.println();
             switch (optionIndex){
