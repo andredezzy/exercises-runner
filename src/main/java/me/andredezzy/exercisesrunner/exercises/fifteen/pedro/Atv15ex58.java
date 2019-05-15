@@ -3,12 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package atv15ex58;
+package me.andredezzy.exercisesrunner.exercises.fifteen.pedro;
 
 import java.util.Scanner;
 
 /**
- *
  * @author pedro
  */
 public class Atv15ex58 {
@@ -18,41 +17,45 @@ public class Atv15ex58 {
      */
     public static void main(String[] args) {
         // Scanner
-        Scanner input = new Scanner (System.in);
+        Scanner input = new Scanner(System.in);
         //Variables
-        int n, q,t;
+        int n, q, t = 0;
         //Cap
-        
+
         System.out.println("Digite aqui o que deseja: ");
         n = input.nextInt();
-        if (n == 100){
+        if (n == 100) {
             System.out.println("Quantos deseja? ");
             q = input.nextInt();
-        t = n * q;}
-        if (n == 101){
-            System.out.println("Quantos deseja? ");
-            q = input.nextInt();
-        t = n * q;}
-        if (n == 102){
-            System.out.println("Quantos deseja? ");
-            q = input.nextInt();
-            t = n * q;}
-        if (n == 103){
-            System.out.println("Quantos deseja? ");
-            q = input.nextInt();
-            t = n * q;}
-        if (n == 104){
-            System.out.println("Quantos deseja? ");
-            q = input.nextInt();
-            t = n * q;}
-        if (n == 105){
-            System.out.println("Quantos deseja? ");
-            q = input.nextInt();
-            t = n * q;}
-        System.out.println("O total da compra é: " + t );
+            t = n * q;
         }
-        
-            
+        if (n == 101) {
+            System.out.println("Quantos deseja? ");
+            q = input.nextInt();
+            t = n * q;
         }
+        if (n == 102) {
+            System.out.println("Quantos deseja? ");
+            q = input.nextInt();
+            t = n * q;
+        }
+        if (n == 103) {
+            System.out.println("Quantos deseja? ");
+            q = input.nextInt();
+            t = n * q;
+        }
+        if (n == 104) {
+            System.out.println("Quantos deseja? ");
+            q = input.nextInt();
+            t = n * q;
+        }
+        if (n == 105) {
+            System.out.println("Quantos deseja? ");
+            q = input.nextInt();
+            t = n * q;
+        }
+        System.out.println("O total da compra é: " + t);
+    }
+}
     
     

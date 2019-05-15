@@ -3,12 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package atv15ex34;
+package me.andredezzy.exercisesrunner.exercises.fifteen.pedro;
 
 import java.util.Scanner;
 
 /**
- *
  * @author pedro
  */
 public class Atv15ex34 {
@@ -18,24 +17,15 @@ public class Atv15ex34 {
      */
     public static void main(String[] args) {
         // Scanner
-        Scanner input = new Scanner (System.in);
+        Scanner input = new Scanner(System.in);
         //CapitãoComandos
-   int    n1, n2, n3;
+        int n1, n2, n3;
         System.out.println("Digite aqui três números: ");
         n1 = input.nextInt();
         n2 = input.nextInt();
         n3 = input.nextInt();
-        if (n1 < n2 || n3 ){;
-            System.out.println(n1);}
-            if else {
-                    System.out.println(n2);
-                    }
-        if else {
-                System.out.println(n3);
-                }
-        
-        
-                
+        if (n1 < n2) {
+            System.out.println(n1);
+        }
     }
-    
 }
