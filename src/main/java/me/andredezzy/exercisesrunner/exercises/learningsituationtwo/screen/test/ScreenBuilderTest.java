@@ -1,40 +1,52 @@
-package me.andredezzy.exercisesrunner.exercises.learningsituationtwo;
+package me.andredezzy.exercisesrunner.exercises.learningsituationtwo.screen.test;
 
+import me.andredezzy.exercisesrunner.exercises.learningsituationtwo.screen.ScreenBuilder;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class ScreenBuilderTest {
 
-    private static final int DEFAULT_LINE_SPACING = 41;
+    private static final int DEFAULT_SCREEN_SPACING = 41;
 
     public static void main(String[] args) {
-        ScreenBuilderTest.printScreen("Cadastro", 
-                Arrays.asList("Aluno", "Turma", "Docentes", "Notas"),
-                LastOptionType.EXIT);
-        ScreenBuilderTest.printInputReceiver();
+        ScreenBuilder testScreenBuilder = new ScreenBuilder("SISTEMA DE GESTÃO ESCOLAR", "Cadastro", false);
+        
+        testScreenBuilder.addOption("Aluno", new Consumer<ScreenBuilder.Option>() {
+            public void accept(ScreenBuilder.Option option) {
+                System.out.println(option.getIndex() + " | " + option.getDisplayName());
+            }
+        });
+        testScreenBuilder.addOption("Processo Seletivo", new Consumer<ScreenBuilder.Option>() {
+            public void accept(ScreenBuilder.Option option) {
+                System.out.println(option.getIndex() + " | " + option.getDisplayName());
+            }
+        });
+        
+        testScreenBuilder.build().captureAndDispatch();
     }
 
     private static void printScreen(String menuName, List<String> options, LastOptionType lastOptionType) {
-        print(appendCharacterFor('-', DEFAULT_LINE_SPACING), false);
+        print(appendCharacterFor('-', DEFAULT_SCREEN_SPACING), false);
         print("      SISTEMA DE GESTÃO ESCOLAR");
-        print(appendCharacterFor('-', DEFAULT_LINE_SPACING), false);
+        print(appendCharacterFor('-', DEFAULT_SCREEN_SPACING), false);
 
         print("MENU - " + menuName.toUpperCase());
 
-        print(appendCharacterFor(' ', DEFAULT_LINE_SPACING), false);
+        print(appendCharacterFor(' ', DEFAULT_SCREEN_SPACING), false);
 
         int optionCount;
         for (optionCount = 0; optionCount < options.size(); optionCount++) {
             print(String.format("[%s] %s", (optionCount + 1), options.get(optionCount).toUpperCase()));
         }
-        
+
         print(" |");
         print(String.format("[%s] %s", (optionCount + 1), lastOptionType.getDisplayName()));
 
-        print(appendCharacterFor('-', DEFAULT_LINE_SPACING), false);
+        print(appendCharacterFor('-', DEFAULT_SCREEN_SPACING), false);
     }
-    
-    private static void printInputReceiver(){
+
+    private static void printInputReceiver() {
         System.out.println("|");
         System.out.print("|-> ");
     }
@@ -54,14 +66,14 @@ public class ScreenBuilderTest {
 
             System.out.println("|" + s + spacingAppend + "|");
         } else {
-            System.out.println("|" + appendCharacterFor(' ', DEFAULT_LINE_SPACING) + "|");
+            System.out.println("|" + appendCharacterFor(' ', DEFAULT_SCREEN_SPACING) + "|");
         }
     }
 
     private static int calculateSpacingCount(String menuName) {
         int menuNameLenght = menuName.length();
 
-        return DEFAULT_LINE_SPACING - menuNameLenght;
+        return DEFAULT_SCREEN_SPACING - menuNameLenght;
     }
 
     private static String appendCharacterFor(char c, int count) {
@@ -73,13 +85,14 @@ public class ScreenBuilderTest {
 
         return spacingStringBuilder.toString();
     }
-    
+
     public enum LastOptionType {
+
         EXIT("SAIR DO SISTEMA"), BACK("VOLTAR");
-        
+
         private String displayName;
-        
-        LastOptionType(String displayName){
+
+        LastOptionType(String displayName) {
             this.displayName = displayName;
         }
 
