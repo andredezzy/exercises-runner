@@ -1,33 +1,30 @@
 package me.andredezzy.exercisesrunner.exercises.learningsituationtwo;
 
-import me.andredezzy.exercisesrunner.Application;
 import me.andredezzy.exercisesrunner.exercises.Exercise;
+import me.andredezzy.exercisesrunner.exercises.learningsituationtwo.screen.ScreenBuilder;
 
 // learningsituationtwo
 public class LearningSituation implements Exercise {
+
+    private static final String DEFAULT_MENU_TITLE = "SISTEMA DE GESTÃO ESCOLAR";
+
+    public static void main(String[] args) {
+        new LearningSituation().run(null);
+    }
 
     public void run(String[] args) {
         int mainMenuSelectedOptionIndex = 0;
 
         while (mainMenuSelectedOptionIndex != 4) {
-            System.out.println("|----------------------------------------|");
-            System.out.println("|       SISTEMA DE GESTÃO ESCOLAR        |");
-            System.out.println("|----------------------------------------|");
-            System.out.println("|  MENU PRINCIPAL                        |");
-            System.out.println("|                                        |");
-            System.out.println("|  [1] CADASTRAR                         |");
-            System.out.println("|  [2] CONSULTAR                         |");
-            System.out.println("|  [3] IMPRESSÃO                         |");
-            System.out.println("|   |                                    |");
-            System.out.println("|  [4] SAIR DO SISTEMA                   |");
-            System.out.println("|----------------------------------------|");
-            System.out.println("|");
-            System.out.print("|-> ");
+            ScreenBuilder mainScreenBuilder = new ScreenBuilder(DEFAULT_MENU_TITLE, "Principal", true);
 
-            mainMenuSelectedOptionIndex = Application.ASKER.askForInt();
+            mainScreenBuilder.addOption("Cadastrar", null);
+            mainScreenBuilder.addOption("Consultar", null);
+            mainScreenBuilder.addOption("Impressão", null);
 
-            System.out.println("|");
-            System.out.println("|");
+            mainMenuSelectedOptionIndex = mainScreenBuilder.build().capture();
+
+            this.separator();
 
             if (mainMenuSelectedOptionIndex == 4) {
                 System.out.println("|-> Saindo...");
@@ -39,43 +36,27 @@ public class LearningSituation implements Exercise {
                     int registerMenuSelectedOptionIndex = 0;
 
                     while (registerMenuSelectedOptionIndex != 5) {
-                        System.out.println("|----------------------------------------|");
-                        System.out.println("|       SISTEMA DE GESTÃO ESCOLAR        |");
-                        System.out.println("|----------------------------------------|");
-                        System.out.println("|  MENU DE CADASTRO                      |");
-                        System.out.println("|                                        |");
-                        System.out.println("|  [1] ALUNO                             |");
-                        System.out.println("|  [2] TURMA                             |");
-                        System.out.println("|  [3] DOCENTES                          |");
-                        System.out.println("|  [4] NOTAS                             |");
-                        System.out.println("|   |                                    |");
-                        System.out.println("|  [5] VOLTAR                            |");
-                        System.out.println("|----------------------------------------|");
-                        System.out.println("|");
-                        System.out.print("|-> ");
+                        ScreenBuilder registerScreenBuilder = new ScreenBuilder(DEFAULT_MENU_TITLE, "Cadastro", false);
 
-                        registerMenuSelectedOptionIndex = Application.ASKER.askForInt();
+                        registerScreenBuilder.addOption("Aluno", null);
+                        registerScreenBuilder.addOption("Turma", null);
+                        registerScreenBuilder.addOption("Docentes", null);
+                        registerScreenBuilder.addOption("Notas", null);
+
+                        registerMenuSelectedOptionIndex = registerScreenBuilder.build().capture();
 
                         switch (registerMenuSelectedOptionIndex) {
                             case 1:
                                 int studentMenuSelectedOptionIndex = 0;
 
                                 while (studentMenuSelectedOptionIndex != 4) {
-                                    System.out.println("|----------------------------------------|");
-                                    System.out.println("|       SISTEMA DE GESTÃO ESCOLAR        |");
-                                    System.out.println("|----------------------------------------|");
-                                    System.out.println("|  MENU DE CADASTRO DO ALUNO             |");
-                                    System.out.println("|                                        |");
-                                    System.out.println("|  [1] CADASTRAR                         |");
-                                    System.out.println("|  [2] PROCESSO SELETIVO                 |");
-                                    System.out.println("|  [3] MATRICULA                         |");
-                                    System.out.println("|   |                                    |");
-                                    System.out.println("|  [4] VOLTAR                            |");
-                                    System.out.println("|----------------------------------------|");
-                                    System.out.println("|");
-                                    System.out.print("|-> ");
+                                    ScreenBuilder studentScreenBuilder = new ScreenBuilder(DEFAULT_MENU_TITLE, "ALUNO", false);
 
-                                    studentMenuSelectedOptionIndex = Application.ASKER.askForInt();
+                                    studentScreenBuilder.addOption("Cadastrar", null);
+                                    studentScreenBuilder.addOption("Processo Seletivo", null);
+                                    studentScreenBuilder.addOption("Matricula", null);
+
+                                    studentMenuSelectedOptionIndex = studentScreenBuilder.build().capture();
                                 }
 
                                 break;
@@ -83,20 +64,12 @@ public class LearningSituation implements Exercise {
                                 int classRoomMenuSelectedOptionIndex = 0;
 
                                 while (classRoomMenuSelectedOptionIndex != 3) {
-                                    System.out.println("|----------------------------------------|");
-                                    System.out.println("|       SISTEMA DE GESTÃO ESCOLAR        |");
-                                    System.out.println("|----------------------------------------|");
-                                    System.out.println("|  MENU DE CADASTRO DA TURMA             |");
-                                    System.out.println("|                                        |");
-                                    System.out.println("|  [1] CADASTRAR                         |");
-                                    System.out.println("|  [2] ALUNO                             |");
-                                    System.out.println("|   |                                    |");
-                                    System.out.println("|  [3] VOLTAR                            |");
-                                    System.out.println("|----------------------------------------|");
-                                    System.out.println("|");
-                                    System.out.print("|-> ");
+                                    ScreenBuilder classRoomScreenBuilder = new ScreenBuilder(DEFAULT_MENU_TITLE, "Turma", false);
 
-                                    classRoomMenuSelectedOptionIndex = Application.ASKER.askForInt();
+                                    classRoomScreenBuilder.addOption("Cadastrar", null);
+                                    classRoomScreenBuilder.addOption("Aluno", null);
+
+                                    classRoomMenuSelectedOptionIndex = classRoomScreenBuilder.build().capture();
                                 }
 
                                 break;
@@ -108,23 +81,15 @@ public class LearningSituation implements Exercise {
                     int consultMenuSelectedOptionIndex = 0;
 
                     while (consultMenuSelectedOptionIndex != 6) {
-                        System.out.println("|----------------------------------------|");
-                        System.out.println("|       SISTEMA DE GESTÃO ESCOLAR        |");
-                        System.out.println("|----------------------------------------|");
-                        System.out.println("|  MENU DE CONSULTA                      |");
-                        System.out.println("|                                        |");
-                        System.out.println("|  [1] PROCESSO SELETIVO                 |");
-                        System.out.println("|  [2] ALUNO POR TURMA                   |");
-                        System.out.println("|  [3] ALUNOS MATRICULADOS               |");
-                        System.out.println("|  [4] NOTAS POR ALUNOS                  |");
-                        System.out.println("|  [5] DOCENTES ATIVOS                   |");
-                        System.out.println("|   |                                    |");
-                        System.out.println("|  [6] VOLTAR                            |");
-                        System.out.println("|----------------------------------------|");
-                        System.out.println("|");
-                        System.out.print("|-> ");
+                        ScreenBuilder consultScreenBuilder = new ScreenBuilder(DEFAULT_MENU_TITLE, "Consulta", false);
 
-                        consultMenuSelectedOptionIndex = Application.ASKER.askForInt();
+                        consultScreenBuilder.addOption("Processo Seletivo", null);
+                        consultScreenBuilder.addOption("Aluno por Turma", null);
+                        consultScreenBuilder.addOption("Alunos Matriculados", null);
+                        consultScreenBuilder.addOption("Notas por Aluno", null);
+                        consultScreenBuilder.addOption("Docentes Ativos", null);
+
+                        consultMenuSelectedOptionIndex = consultScreenBuilder.build().capture();
                     }
 
                     break;
@@ -132,30 +97,26 @@ public class LearningSituation implements Exercise {
                     int printMenuSelectedOptionIndex = 0;
 
                     while (printMenuSelectedOptionIndex != 6) {
-                        System.out.println("|----------------------------------------|");
-                        System.out.println("|       SISTEMA DE GESTÃO ESCOLAR        |");
-                        System.out.println("|----------------------------------------|");
-                        System.out.println("|  MENU DE IMPRESSÃO                     |");
-                        System.out.println("|                                        |");
-                        System.out.println("|  [1] ALUNOS MATRICULADOS               |");
-                        System.out.println("|  [2] ALUNOS POR TURMA                  |");
-                        System.out.println("|  [3] PROCESSO SELETIVO                 |");
-                        System.out.println("|  [4] NOTAS POR ALUNO                   |");
-                        System.out.println("|  [5] NOTAS DOS ALUNOS POR TURMA        |");
-                        System.out.println("|   |                                    |");
-                        System.out.println("|  [6] VOLTAR                            |");
-                        System.out.println("|----------------------------------------|");
-                        System.out.println("|");
-                        System.out.print("|-> ");
+                        ScreenBuilder printScreenBuilder = new ScreenBuilder(DEFAULT_MENU_TITLE, "Impressão", false);
 
-                        printMenuSelectedOptionIndex = Application.ASKER.askForInt();
+                        printScreenBuilder.addOption("Alunos Matriculados", null);
+                        printScreenBuilder.addOption("Alunos por Turma", null);
+                        printScreenBuilder.addOption("Processo Seletivo", null);
+                        printScreenBuilder.addOption("Notas por Aluno", null);
+                        printScreenBuilder.addOption("Notas dos Alunos por Turma", null);
+
+                        printMenuSelectedOptionIndex = printScreenBuilder.build().capture();
                     }
 
                     break;
             }
 
-            System.out.println("|");
-            System.out.println("|");
+            this.separator();
         }
+    }
+
+    private void separator() {
+        System.out.println("|");
+        System.out.println("|");
     }
 }
