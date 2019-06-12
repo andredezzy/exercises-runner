@@ -20,7 +20,7 @@ public class Formatter {
             decimalsStringBuilder.append("0");
         }
 
-        DecimalFormat trimDecimalFormat = new DecimalFormat(String.format("#.%s", decimalsStringBuilder.toString()));
+        DecimalFormat trimDecimalFormat = new DecimalFormat(String.format("0.%s", decimalsStringBuilder.toString()));
 
         return trimDecimalFormat.format(n);
     }
