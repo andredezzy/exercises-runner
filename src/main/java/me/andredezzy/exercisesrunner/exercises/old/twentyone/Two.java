@@ -1,4 +1,4 @@
-package me.andredezzy.exercisesrunner.exercises.twentyone;
+package me.andredezzy.exercisesrunner.exercises.old.twentyone;
 
 import java.util.Arrays;
 import me.andredezzy.exercisesrunner.exercises.Exercise;

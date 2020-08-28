@@ -1,7 +1,7 @@
-package me.andredezzy.exercisesrunner.exercises.learningsituationtwo.screen.test;
+package me.andredezzy.exercisesrunner.exercises.old.learningsituationtwo.screen.test;
 
-import me.andredezzy.exercisesrunner.exercises.learningsituationtwo.screen.ScreenBuilder;
-import java.util.Arrays;
+import me.andredezzy.exercisesrunner.exercises.old.learningsituationtwo.screen.ScreenBuilder;
+
 import java.util.List;
 import java.util.function.Consumer;
 

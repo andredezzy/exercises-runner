@@ -1,4 +1,4 @@
-package me.andredezzy.exercisesrunner.exercises.learningsituationtwo.screen.utils;
+package me.andredezzy.exercisesrunner.exercises.old.learningsituationtwo.screen.utils;
 
 public class ScreenFormatter {
 
