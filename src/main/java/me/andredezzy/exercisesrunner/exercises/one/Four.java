@@ -5,14 +5,13 @@ import me.andredezzy.exercisesrunner.exercises.Exercise;
 
 public class Four implements Exercise {
     public void run(String[] args) {
-        System.out.print("Informe um valor: ");
-        double value = Application.ASKER.askForDouble();
+        System.out.print("Informe o número de repetições: ");
+        int loopCount = Application.ASKER.askForInt();
 
-        System.out.print("Informe uma porcentagem de juros à ser acrescentada: ");
-        double percentage = Application.ASKER.askForPercentage();
+        System.out.println();
 
-        double finalValue = value * percentage;
-
-        System.out.printf("%nValor final: R$ %s.%n", finalValue);
+        for (int i = 0; i < loopCount; i++) {
+            System.out.printf("Repetição Nº: %d%n", i);
+        }
     }
 }
