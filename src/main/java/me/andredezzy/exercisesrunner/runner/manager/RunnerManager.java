@@ -1,7 +1,6 @@
 package me.andredezzy.exercisesrunner.runner.manager;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class RunnerManager {
