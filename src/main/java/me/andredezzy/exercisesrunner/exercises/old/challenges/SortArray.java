@@ -1,4 +1,4 @@
-package me.andredezzy.exercisesrunner.exercises.challenges;
+package me.andredezzy.exercisesrunner.exercises.old.challenges;
 
 import java.util.Random;
 import me.andredezzy.exercisesrunner.exercises.Exercise;

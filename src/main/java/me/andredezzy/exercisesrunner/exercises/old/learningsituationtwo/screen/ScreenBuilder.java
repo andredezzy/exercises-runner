@@ -1,11 +1,11 @@
-package me.andredezzy.exercisesrunner.exercises.learningsituationtwo.screen;
+package me.andredezzy.exercisesrunner.exercises.old.learningsituationtwo.screen;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 import me.andredezzy.exercisesrunner.Application;
 
-import static me.andredezzy.exercisesrunner.exercises.learningsituationtwo.screen.utils.ScreenFormatter.*;
+import static me.andredezzy.exercisesrunner.exercises.old.learningsituationtwo.screen.utils.ScreenFormatter.*;
 
 public class ScreenBuilder {
 

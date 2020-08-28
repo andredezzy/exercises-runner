@@ -1,4 +1,4 @@
-package me.andredezzy.exercisesrunner.exercises.eighteen;
+package me.andredezzy.exercisesrunner.exercises.old.eighteen;
 
 import javax.swing.JOptionPane;
 import me.andredezzy.exercisesrunner.exercises.Exercise;

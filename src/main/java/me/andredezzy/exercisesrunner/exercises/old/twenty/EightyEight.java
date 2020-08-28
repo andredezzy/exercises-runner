@@ -1,4 +1,4 @@
-package me.andredezzy.exercisesrunner.exercises.twenty;
+package me.andredezzy.exercisesrunner.exercises.old.twenty;
 
 import me.andredezzy.exercisesrunner.exercises.Exercise;
 
