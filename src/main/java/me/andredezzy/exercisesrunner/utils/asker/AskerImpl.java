@@ -30,7 +30,9 @@ public class AskerImpl implements Asker {
 
     public double askForPercentage() {
         String percentageString = this.askForString();
-        
-        return Double.parseDouble(percentageString.replace("%", ""));
+
+        double parsedDouble = Double.parseDouble(percentageString.replace("%", ""));
+
+        return (parsedDouble / 100) + 1;
     }
 }
