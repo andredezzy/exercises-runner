@@ -6,7 +6,6 @@ public class Employee extends Person {
 
     protected int departmentCode;
     protected double grossSalary;
-    protected double aidCosts;
 
     protected double tax;
 
@@ -32,14 +31,6 @@ public class Employee extends Person {
         this.tax = this.grossSalary / 100;
     }
 
-    public double getAidCosts() {
-        return aidCosts;
-    }
-
-    public void setAidCosts(double aidCosts) {
-        this.aidCosts = aidCosts;
-    }
-
     public double getTax() {
         return tax;
     }
@@ -53,7 +44,6 @@ public class Employee extends Person {
         return "Employee{" +
                 "departmentCode=" + departmentCode +
                 ", grossSalary=" + grossSalary +
-                ", aidCosts=" + aidCosts +
                 ", tax=" + tax +
                 ", salary=" + this.calculateSalary() +
                 ", id=" + id +
