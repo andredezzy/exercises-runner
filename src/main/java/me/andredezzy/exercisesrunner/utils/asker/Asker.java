@@ -9,6 +9,8 @@ public interface Asker {
     int askForInt();
     
     double askForDouble();
+
+    boolean askForBoolean();
     
     double askForPercentage();
 }
