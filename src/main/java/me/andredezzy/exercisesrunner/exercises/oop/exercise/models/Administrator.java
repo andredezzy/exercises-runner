@@ -2,8 +2,18 @@ package me.andredezzy.exercisesrunner.exercises.oop.exercise.models;
 
 public class Administrator extends Employee {
 
+    protected double aidCosts;
+
     public Administrator(int id, String name, String maritalStatus, String sex) {
         super(id, name, maritalStatus, sex);
+    }
+
+    public double getAidCosts() {
+        return aidCosts;
+    }
+
+    public void setAidCosts(double aidCosts) {
+        this.aidCosts = aidCosts;
     }
 
     @Override

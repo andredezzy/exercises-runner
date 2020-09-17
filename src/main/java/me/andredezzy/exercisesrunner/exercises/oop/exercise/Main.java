@@ -39,12 +39,13 @@ public class Main implements Exercise {
 
         if (administrator) {
             employee = new Administrator(personId, name, maritalStatus, sex);
+
+            ((Administrator) employee).setAidCosts(aidCosts);
         } else {
             employee = new Employee(personId, name, maritalStatus, sex);
         }
 
         employee.setGrossSalary(grossSalary);
-        employee.setAidCosts(aidCosts);
 
         System.out.printf("%n%s", employee);
 

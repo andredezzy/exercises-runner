@@ -32,6 +32,11 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return String.format("Person{id=%d, name='%s', maritalStatus='%s', sex='%s'}", id, name, maritalStatus, sex);
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", maritalStatus='" + maritalStatus + '\'' +
+                ", sex='" + sex + '\'' +
+                '}';
     }
 }
